@@ -23,8 +23,7 @@ Countries.findOne({name:cityToSearch},function(err,infoExists)
 if (infoExists)
         {
           return res.json({
-                speech: infoExists.short,
-                short: infoExists.short,
+                fulfillmentText: infoExists.short,
                 source: 'bip info'
             });
         }
