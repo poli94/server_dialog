@@ -8,7 +8,7 @@ exports.processRequest = function(req, res) {
 
 function getCountries(req,res)
 {
-let cityToSearch = req.body.result && req.body.result.parameters && req.body.result.parameters.city ? req.body.result.parameters.city : 'Unknown';
+let cityToSearch = req.body.queryResult && req.body.queryResult.parameters && req.body.queryResult.parameters.city ? req.body.queryResult.parameters.city : 'Unknown';
 console.log(cityToSearch);
 Countries.findOne({name:cityToSearch},function(err,infoExists)
       {
